@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------------------------------Favicon------------------------------------->
+    <link rel="icon" type="image/x-icon" href="Icons/icons8-calculator-120 (1).png">
+    <!---------------------------------Style-------------------------------------->
+    <link rel="stylesheet" href="Style/style.css">
+    <!------------------------------Font Awsome----------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!----------------------------------title------------------------------------->
+
+    <title>Calculator</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="time">
+                <div class="time_note">
+                    <h3 id="timer"></h3>
+                </div>
+                <i class="far fa-clock" style="font-size: 16px;" title="it doesn't work"></i>
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fa fa-signal-5" style="font-size:13px ;"></i>
+                    <i class="fa fa-wifi" style="font-size: 13px;"></i>
+                    <i class="fa fa-battery-2" style="font-size: 13px;"></i>
+                </div>
+                <button class="btn_icon" type="button" value="Refresh" onclick="refresh()" title="Refresh"><i
+                        class="fas fa-redo-alt" style="font-size: 16px;" id="back"></i></button>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <table class="calculator">
+            <div class="container">
+                <div class="box_calculator">
+                    <tr class="screen">
+                        <td colspan="4"><input class="display_box" type="button" id="result"></td>
+                    </tr>
+                    <tr>
+                        <td> <input class="button btn_top" type="button" value="AC" onclick="clearScreen()" /> </td>
+                        <td> <input class="button btn_top" type="button" value="C" onclick="clearItem()" /> </td>
+                        <td> <input class="button btn_top" type="button" value="%" onclick="display('%')" /> </td>
+                        <td> <input class="button btn_bot" type="button" value="/" onclick="display('/')" /> </td>
+                    </tr>
+                    <tr>
+                        <td> <input class="button" type="button" value="7" onclick="display('7')" /> </td>
+                        <td> <input class="button" type="button" value="8" onclick="display('8')" /> </td>
+                        <td> <input class="button" type="button" value="9" onclick="display('9')" /> </td>
+                        <td> <input class="button btn_bot" type="button" value="X" onclick="display('*')" /> </td>
+                    </tr>
+                    <tr>
+                        <td> <input class="button" type="button" value="4" onclick="display('4')" /> </td>
+                        <td> <input class="button" type="button" value="5" onclick="display('5')" /> </td>
+                        <td> <input class="button" type="button" value="6" onclick="display('6')" /> </td>
+                        <td> <input class="button btn_bot" type="button" value="-" onclick="display('-')" /> </td>
+                    </tr>
+                    <tr>
+                        <td> <input class="button" type="button" value="1" onclick="display('1')" /> </td>
+                        <td> <input class="button" type="button" value="2" onclick="display('2')" /> </td>
+                        <td> <input class="button" type="button" value="3" onclick="display('3')" /> </td>
+                        <td> <input class="button btn_bot" type="button" value="+" onclick="display('+')" /> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> <input class="button btn_0" type="button" value="0" onclick="display('0')"
+                                style="width:100% ;" /> </td>
+                        <td> <input class="button" type="button" value="." onclick="display('.')" /> </td>
+                        <td> <input class="button btn" type="button" value="=" onclick="calculate()" /> </td>
+                    </tr>
+                </div>
+            </div>
+        </table>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <button class="mode" onclick="darkMode()" value="dark_mode"><i class="fa fa-adjust"></i></button>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
